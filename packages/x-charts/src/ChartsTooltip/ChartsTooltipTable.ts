@@ -31,11 +31,11 @@ export const ChartsTooltipTable = styled('table', {
   },
   '& caption': {
     borderBottom: `solid ${(theme.vars || theme).palette.divider} 1px`,
-    padding: theme.spacing(0.5, 1.5),
+    padding: `calc(${theme.spacing(1)} * 0.5) calc(${theme.spacing(1)} * 1.5)`,
     textAlign: 'start',
     whiteSpace: 'nowrap',
     '& span': {
-      marginRight: theme.spacing(1.5),
+      marginRight: `calc(${theme.spacing(1)} * 1.5)`,
     },
   },
 }));
@@ -48,10 +48,10 @@ export const ChartsTooltipRow = styled('tr', {
   slot: 'Row',
 })(({ theme }) => ({
   'tr:first-of-type& td': {
-    paddingTop: theme.spacing(0.5),
+    paddingTop: `calc(${theme.spacing(1)} * 0.5)`,
   },
   'tr:last-of-type& td': {
-    paddingBottom: theme.spacing(0.5),
+    paddingBottom: `calc(${theme.spacing(1)} * 0.5)`,
   },
 }));
 
@@ -77,13 +77,13 @@ export const ChartsTooltipCell = styled(Typography, {
     fontWeight: theme.typography.fontWeightMedium,
   },
   [`&.${chartsTooltipClasses.valueCell}`]: {
-    paddingLeft: theme.spacing(1.5),
-    paddingRight: theme.spacing(1.5),
+    paddingLeft: `calc(${theme.spacing(1)} * 1.5)`,
+    paddingRight: `calc(${theme.spacing(1)} * 1.5)`,
   },
   'td:first-of-type&, th:first-of-type&': {
-    paddingLeft: theme.spacing(1.5),
+    paddingLeft: `calc(${theme.spacing(1)} * 1.5)`,
   },
   'td:last-of-type&, th:last-of-type&': {
-    paddingRight: theme.spacing(1.5),
+    paddingRight: `calc(${theme.spacing(1)} * 1.5)`,
   },
 }));
